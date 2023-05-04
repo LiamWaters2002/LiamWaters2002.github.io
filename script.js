@@ -1,13 +1,13 @@
-var TrandingSlider = new Swiper('.trending-slider', {
+var TrendingSlider = new Swiper('.trending-slider', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
     loop: true,
-    slidesPerView: 'auto',
+    slidesPerView: 4,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
-      depth: 100,
+      depth: 200,
       modifier: 2.5,
     },
     pagination: {
@@ -19,3 +19,10 @@ var TrandingSlider = new Swiper('.trending-slider', {
       prevEl: '.swiper-button-prev',
     }
   });
+
+const cards = document.querySelectorAll('.swiper-slide');
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    window.location.href = 'project-page.html';
+  });
+});
