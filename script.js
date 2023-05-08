@@ -1,3 +1,5 @@
+import {OBJLoader} from 'three/examples/jsm/loaders/OBJLoader.js';
+
 var TrendingSlider = new Swiper('.trending-slider', {
     effect: 'coverflow',
     grabCursor: true,
@@ -26,3 +28,31 @@ cards.forEach(card => {
     window.location.href = 'project-page.html';
   });
 });
+
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+const renderer = new THREE.WebGLRenderer({ alpha: true });
+renderer.setClearColor(0x000000, 0);
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('renderObject').appendChild(renderer.domElement);
+
+// Load the model
+const loader = new THREE.OBJLoader();
+loader.load("animations/LiamWatersAnimation.obj", function (object) {
+  scene.add(object);
+});
+
+// const geometry = new THREE.BoxGeometry();
+// const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+// const cube = new THREE.Mesh(geometry, material);
+// scene.add(cube);
+
+function animate() {
+  requestAnimationFrame(animate);
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
+  renderer.render(scene, camera);
+}
+animate();
