@@ -1,5 +1,7 @@
-import {OBJLoader} from 'three/examples/jsm/loaders/OBJLoader.js';
+import * as THREE from './three/build/three.module.js';
 
+//To import any loaders, go to the loader file, change from 'three' to 'relitive path of three.module.js'
+import {GLTFLoader} from './three/examples/jsm/loaders/GLTFLoader.js';
 var TrendingSlider = new Swiper('.trending-slider', {
     effect: 'coverflow',
     grabCursor: true,
@@ -38,11 +40,17 @@ renderer.setClearColor(0x000000, 0);
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('renderObject').appendChild(renderer.domElement);
 
-// Load the model
-const loader = new THREE.OBJLoader();
-loader.load("animations/LiamWatersAnimation.obj", function (object) {
-  scene.add(object);
+//Load the model
+const loader = new GLTFLoader();
+loader.load("animations/LiamWatersAnimation.glb", function (glb) {
+  const root = glb.scene;
+  root.scale.set(0.01, 0.01, 0.01);
+  scene.add(root);
 });
+
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(2,2,5);
+scene.add(light);
 
 // const geometry = new THREE.BoxGeometry();
 // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
@@ -51,8 +59,6 @@ loader.load("animations/LiamWatersAnimation.obj", function (object) {
 
 function animate() {
   requestAnimationFrame(animate);
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
   renderer.render(scene, camera);
 }
 animate();
