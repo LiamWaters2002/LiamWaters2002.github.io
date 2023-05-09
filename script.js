@@ -49,11 +49,12 @@ loader.load("./animations/LiamWatersAnimation.gltf", function (gltf) {
 
 
 // create a bezier curve - switch x and y for blender coords...
+//Use threejs.org to determine positions
 var curve = new THREE.CubicBezierCurve3(
-new THREE.Vector3(16.30502, -12.2077, -292.602),
-new THREE.Vector3(-386.266, -12.2077, 90.032),
-new THREE.Vector3(16.30502, -12.2077, 512.538),
-new THREE.Vector3(418.876, -12.2077, 90.032)
+new THREE.Vector3(0, -12.2077, -300),
+new THREE.Vector3(-400, -12.2077, -600),
+new THREE.Vector3(-400, -12.2077, 800),
+new THREE.Vector3(500.366, -12.2077, 424.684)
 );
 
   // create a geometry from the curve
@@ -63,7 +64,7 @@ new THREE.Vector3(418.876, -12.2077, 90.032)
   var material = new THREE.LineBasicMaterial({color: 0xff0000});
 
   // create a line from the geometry and material
-  var line = new THREE.Line(geometry, material);
+  var line = new THREE.Curve(geometry);
 
   // add the line to the scene
   scene.add(line);
