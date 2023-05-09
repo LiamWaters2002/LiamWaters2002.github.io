@@ -1,6 +1,6 @@
 import * as THREE from './three/build/three.module.js';
 
-//To import any loaders, go to the loader file, change from 'three' to 'relitive path of three.module.js'
+//To import any loaders, go
 import {GLTFLoader} from './three/examples/jsm/loaders/GLTFLoader.js';
 var TrendingSlider = new Swiper('.trending-slider', {
     effect: 'coverflow',
@@ -32,6 +32,8 @@ cards.forEach(card => {
 });
 
 
+//Scene
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 5;
@@ -42,16 +44,18 @@ document.getElementById('renderObject').appendChild(renderer.domElement);
 
 //Load the model
 const loader = new GLTFLoader();
-loader.load("animations/LiamWatersAnimation.glb", function (glb) {
-  const root = glb.scene;
-  root.scale.set(0.01, 0.01, 0.01);
-  scene.add(root);
+loader.load("./animations/LiamWatersAnimation.glb", function (gltf) {
+
+  console.log(gltf.cameras);
+  console.log(gltf.scene.children);
+  console.log("hello");
+
+  const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+  scene.add( light );
+
+  scene.add(gltf.scene);
 });
-
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(2,2,5);
-scene.add(light);
-
+console.log("hello");
 // const geometry = new THREE.BoxGeometry();
 // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 // const cube = new THREE.Mesh(geometry, material);
@@ -59,6 +63,8 @@ scene.add(light);
 
 function animate() {
   requestAnimationFrame(animate);
+  // cube.rotation.x += 0.01;
+  // cube.rotation.y += 0.01;
   renderer.render(scene, camera);
 }
 animate();
