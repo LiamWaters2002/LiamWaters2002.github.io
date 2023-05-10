@@ -1,7 +1,3 @@
-import * as THREE from './three/build/three.module.js';
-
-//To import any loaders, go
-import {GLTFLoader} from './three/examples/jsm/loaders/GLTFLoader.js';
 var TrendingSlider = new Swiper('.trending-slider', {
     effect: 'coverflow',
     grabCursor: true,
@@ -29,77 +25,4 @@ cards.forEach(card => {
   card.addEventListener('click', () => {
     window.location.href = 'project-page.html';
   });
-});
-
-
-//Scene
-
-const scene = new THREE.Scene();
-const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setClearColor(0x000000, 0);
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('renderObject').appendChild(renderer.domElement);
-
-//Load the model
-const loader = new GLTFLoader();
-loader.load("./animations/LiamWatersAnimation.gltf", function (gltf) {
-
-  const camera = gltf.cameras[0];
-  const objectToFocus = gltf.scene.getObjectByName('W');
-
-
-// create a bezier curve - switch x and y for blender coords...
-//Use threejs.org to determine positions
-var curve = new THREE.CubicBezierCurve3(
-new THREE.Vector3(0, -12.2077, -300),
-new THREE.Vector3(-400, -12.2077, -600),
-new THREE.Vector3(-400, -12.2077, 800),
-new THREE.Vector3(500.366, -12.2077, 424.684)
-);
-
-  // create a geometry from the curve
-  var geometry = new THREE.BufferGeometry().setFromPoints(curve.getPoints(50));
-
-  // create a material for the curve
-  var material = new THREE.LineBasicMaterial({color: 0xff0000});
-
-  // create a line from the geometry and material
-  var line = new THREE.Curve(geometry);
-
-  // add the line to the scene
-  scene.add(line);
-
-  // set the initial position of the camera
-  camera.position.set(-193.133, -12.2077, -45.016,);
-
-  // create a variable to store the current point on the curve
-  var t = 0;
-
-
-  console.log(camera);
-  console.log(gltf.scene);
-
-  const light = new THREE.AmbientLight( 0x404040 ); // soft white light
-  scene.add( light );
-
-  scene.add(gltf.scene);
-
-  function animate() {
-    requestAnimationFrame(animate);
-
-     // update the position of the camera based on the curve point at t
-  camera.position.copy(curve.getPointAt(t));
-
-  // update the direction of the camera to look at an object in the scene
-  camera.lookAt(objectToFocus.position);
-
-  // increment t by a small amount
-  t += 0.001;
-
-  // wrap t around if it exceeds 1
-  if (t > 1) t = 0;
-
-    renderer.render(scene, camera);
-  }
-  animate();
 });
