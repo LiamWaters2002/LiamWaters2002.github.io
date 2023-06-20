@@ -1,8 +1,7 @@
-import * as THREE from './three/build/three.module.js';
+import * as THREE from '../three/build/three.module.js';
 
 //To import any loaders, go
-import {GLTFLoader} from './three/examples/jsm/loaders/GLTFLoader.js';
-
+import {GLTFLoader} from '../three/examples/jsm/loaders/GLTFLoader.js';
 //Scene
 
 const scene = new THREE.Scene();
@@ -10,8 +9,8 @@ const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setClearColor(0x000000, 0);
 renderer.antialias = true;
 renderer.setPixelRatio(window.devicePixelRatio * 2);
-renderer.setSize(500, 500);
-document.getElementById('renderAnimatedObject').appendChild(renderer.domElement);
+renderer.setSize(350, 250);
+document.getElementById('renderObject').appendChild(renderer.domElement);
 
 //Load the texture
 const textureLoader = new THREE.TextureLoader();
@@ -27,6 +26,10 @@ loader.load("./animations/LiamWatersAnimation.gltf", function (gltf) {
   camera.updateProjectionMatrix(); // required to apply changes to the camera
 
   const objectToFocus = gltf.scene.getObjectByName('W');
+
+  //This is only needed for logo
+  gltf.scene.remove(gltf.scene.getObjectByName('Pole'));
+  gltf.scene.remove(gltf.scene.getObjectByName('Flag'));
 
 
 // create a bezier curve - switch x and y for blender coords...
@@ -54,7 +57,6 @@ var curve = new THREE.CubicBezierCurve3(
   camera.position.set(-193.133, -12.2077, -45.016,);
 
 
-
   console.log(camera);
   console.log(gltf.scene);
 
@@ -69,31 +71,11 @@ var curve = new THREE.CubicBezierCurve3(
 
   scene.add(gltf.scene);
 
-  let leftMovement = false;
-  let pointLocation = 0;
-  
   function animate() {
-      requestAnimationFrame(animate);
-      
-      camera.position.copy(curve.getPointAt(pointLocation));
-      camera.lookAt(objectToFocus.position);
-      
-      // increment t by a small amount
-      if(leftMovement == false){
-          pointLocation += 0.001;
-      }
-      else{
-          pointLocation -= 0.001;
-      }
-      
-      if (pointLocation > 0.68){
-          leftMovement = true;
-      }
-      else if (pointLocation < 0){
-          leftMovement = false;
-      }
-      
+    requestAnimationFrame(animate);
+    camera.position.copy(curve.getPointAt(0.25));
+    camera.lookAt(objectToFocus.position);
       renderer.render(scene, camera);
-  }
+    }
   animate();
 });

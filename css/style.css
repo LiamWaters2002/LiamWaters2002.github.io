@@ -49,10 +49,25 @@ body {
   background: var(--bg);
 }
 
+header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
 .container {
   max-width: 124rem;
   padding: 0 1rem;
   margin: 0 auto;
+}
+
+#renderObject{
+  position: absolute;
+  left: -85px;
+  top: -95px;
 }
 
 .text-center {

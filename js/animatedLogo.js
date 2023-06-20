@@ -1,7 +1,8 @@
-import * as THREE from './three/build/three.module.js';
+import * as THREE from '../three/build/three.module.js';
 
 //To import any loaders, go
-import {GLTFLoader} from './three/examples/jsm/loaders/GLTFLoader.js';
+import {GLTFLoader} from '../three/examples/jsm/loaders/GLTFLoader.js';
+
 //Scene
 
 const scene = new THREE.Scene();
@@ -10,7 +11,7 @@ renderer.setClearColor(0x000000, 0);
 renderer.antialias = true;
 renderer.setPixelRatio(window.devicePixelRatio * 2);
 renderer.setSize(500, 500);
-document.getElementById('renderObject').appendChild(renderer.domElement);
+document.getElementById('renderAnimatedObject').appendChild(renderer.domElement);
 
 //Load the texture
 const textureLoader = new THREE.TextureLoader();
@@ -53,6 +54,7 @@ var curve = new THREE.CubicBezierCurve3(
   camera.position.set(-193.133, -12.2077, -45.016,);
 
 
+
   console.log(camera);
   console.log(gltf.scene);
 
@@ -67,11 +69,31 @@ var curve = new THREE.CubicBezierCurve3(
 
   scene.add(gltf.scene);
 
+  let leftMovement = false;
+  let pointLocation = 0;
+  
   function animate() {
-    requestAnimationFrame(animate);
-    camera.position.copy(curve.getPointAt(0.25));
-    camera.lookAt(objectToFocus.position);
+      requestAnimationFrame(animate);
+      
+      camera.position.copy(curve.getPointAt(pointLocation));
+      camera.lookAt(objectToFocus.position);
+      
+      // increment t by a small amount
+      if(leftMovement == false){
+          pointLocation += 0.001;
+      }
+      else{
+          pointLocation -= 0.001;
+      }
+      
+      if (pointLocation > 0.68){
+          leftMovement = true;
+      }
+      else if (pointLocation < 0){
+          leftMovement = false;
+      }
+      
       renderer.render(scene, camera);
-    }
+  }
   animate();
 });

@@ -20,9 +20,13 @@ var TrendingSlider = new Swiper('.trending-slider', {
     }
   });
 
-const cards = document.querySelectorAll('.swiper-slide');
+var cards = document.querySelectorAll('.swiper-slide');
+
 cards.forEach(card => {
   card.addEventListener('click', () => {
-    window.location.href = 'project-page.html';
+    var pageUrl = card.getAttribute('data-page');
+    if (pageUrl) {
+      window.location.href = pageUrl;
+    }
   });
 });
