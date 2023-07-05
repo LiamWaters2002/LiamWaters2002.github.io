@@ -2,13 +2,15 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Prison Outbreak</title>
+  <title>Booking Events</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css\project-detail.css">
 </head>
 <body>
   <div class="project-container">
-    <h1 class="project-title">Project Title</h1>
+
+    <h1 class="project-title">Booking Events</h1>
+
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide slide1">
@@ -52,6 +54,7 @@
       </div>
     </div>
     <div class="swiper-pagination"></div> <!-- Moved pagination dots here -->
+    <div class="comments-container">Image: Home Page</div>
     <div class="swiper-thumbs">
       <div class="swiper-wrapper">
         <div class="swiper-slide swiper-slide-thumb-active">
@@ -69,8 +72,65 @@
       </div>
     </div>
     <div class="project-details">
-      <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dui ut nunc blandit tempus. Nullam eget odio a nisi sodales ultrices. Proin ullamcorper, arcu sed volutpat ultrices, arcu leo commodo leo, vitae posuere mauris arcu sit amet tortor. Curabitur ut ultricies tortor, sit amet porta dui.</p>
-      <a class="project-link" href="#">Visit Project</a>
+      <p class="project-description">
+        <h2>Project Overview</h2>
+
+        <p>The event booking website was univeristy coursework for Internet Applications and Database Design. This was a first year module in which I had to build a website, something I have never done before. 
+        <br>I achieved a 96% in that module, in which the website contributed to 80% of the final mark, 20% were from weekly assessments (9 in total).</p>
+
+        <h2>Technologies Used</h2>
+        HTML<br>
+        CSS<br>
+        JavaScript<br>
+        PHP<br>
+        MySQL<br>
+
+        <h2>Key Features</h2>
+        Filter System (categories)<br>
+        Order System (Date, time)<br>
+        Dynamic Content from Relational Database<br>
+        Like and Booking System<br>
+        Register and Login System<br>
+        Responsive UI design<br>
+
+        <>
+
+        <h2>What's next?</h2>
+        Since this was my first ever project, there are things I would like to improve and add that I learned during my years learning computer science.<br>
+        <br>
+
+        1. UI design<br>
+he UI to improve its design. For example, make the design less 'boxy' and reduce the amount of colour as it is distracting. Some UI design choices I made when making the website in first year was a responsive design.
+        <br>
+        <br>
+
+        The main objective of the assignment was to create a functional web application that met all requirements on a specification sheet. UX design was not taught until final year, hence it was not a requirement. Looking back at this project, 
+        there are things I can do to t
+        2. Payment System<br>
+        Shopify API could be utilised for events that require payment. This was not a requirement for the assessment, but it is something I plan to add.
+        <br>
+        <br>
+        3. Event Organiser Role<br>
+        Ability to create new events 
+        <br>
+        <br>
+        4. Admin Role<br>
+        Ability to grant event organiser role to specific accounts.
+        <br>
+        <br>
+        5. Filter to only display liked / booked events only... 
+        <br>
+        <br>
+
+
+      <a class="project-link" onclick="openLinkInNewTab('https://eventsbookings.000webhostapp.com/')">Try Live Demo</a>
+      <a class="project-link" onclick="openLinkInNewTab('https://github.com/LiamWaters2002')">View GitHub Repository</a>
+
+      <script>
+        function openLinkInNewTab(url) {
+          window.open(url, '_blank');
+        }
+        </script>
     </div>
   </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

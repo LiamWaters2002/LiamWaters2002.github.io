@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css\header.css">
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\profile.css">
+    <link rel="stylesheet" href="css\plCards.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
@@ -62,22 +64,30 @@
     <div id="renderAnimatedObject">
 
     </div>
- </div> 
+  </div> 
 
 
-    <div class="container">
-      <h1>Liam Waters</h1>
-      <p>I am a Computer Science graduate who is working towards being a full stack developer.</p>
-      <p>To develop my skills I work on projects, self-teach myself new technologies and tools</p>
-      <p></p>
-         from websites, software, games, apps and more.</p>
-      <p></p>Self teaching new technology and tools such as Three.js
-      <p>In my free time, I keep up to date by reading up on the latest technology, current affairs. I also exercise during my freetime and also do a bit of gaming.</p>
+  <div class = "container">
+    <div class="profile-container">
+      <div class="profile-picture">
+        <img src="images/profile.png" alt="Profile Picture"> 
+      </div>
+      <div class="profile-text">
+        <h1>Hi. I'm Liam Waters.</h1>
+        <p>I am a Computer Science graduate who is working towards being a full stack developer.</p>
+        <p>To develop my skills I work on projects, self-teach myself new technologies and tools</p>
+        <p></p>
+          from websites, software, games, apps and more.</p>
+        <p>I also developed my 3D modelling and animation skills by self teaching blender and three.js</p>
+        <p>In my free time, I keep up to date by reading up on the latest technology, current affairs. I also exercise during my freetime and also do a bit of gaming.</p>
+      </div>
     </div>
+    </div>
+
     <section id="trending">
 
         <div class="container">
-          <h3 class="text-center section-subheading">- Projects -</h3>
+          <h3 class="text-center section-subheading">- Featured Projects -</h3>
           <h1 class="text-center section-heading">Games</h1>
         </div>
 
@@ -175,66 +185,135 @@
         </div>
       </section>
 
-      <div>
+      <div class = "container">
         <h2>Web Development:</h2>
+        <br>
         <ul>
-          <li>HTML</li>
-
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" height="100px" width = "100px"/>
-          
-          <li>CSS</li>
-
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" height="100px" width = "100px"/>
-          
-          <li>JavaScript</li>
-
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="100px" width = "100px"/>
-          
-          <li>PHP</li>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="100px" width = "100px"/>
-          
-          <li>Three.js</li>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg" height="100px" width = "100px"/>
-          
+          <div class="card-container">
+            <li>
+              <span>HTML</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+              </div>
+            </li>
+        
+            <li>
+              <span>CSS</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+              </div>
+            </li>
+        
+            <li>
+              <span>JavaScript</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+              </div>
+            </li>
+        
+            <li>
+              <span>PHP</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+              </div>
+            </li>
+        
+            <li>
+              <span>Three.js</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg" />
+              </div>
+            </li>
+          </div>
         </ul>
       
-        <h2>Backend Development:</h2>
+        <br>
+        <h2>App Development:</h2>
+        <br>
+
         <ul>
-          <li>Java (JavaFX, Android Development)</li>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" height="100px" width = "100px"/>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" height="100px" width = "100px"/>
-          
-          <li>C#</li>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="100px" width = "100px"/>     
+          <div class="card-container">
+            <li>
+              <span>Android</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" />
+              </div>
+            </li>
+
+            <li>
+              <span>Android Studio</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" />
+              </div>
+            </li>
+
+            <li>
+              <span>Java</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
+              </div>
+            </li>
+          </div>
         </ul>
-      
+
+        <br>
         <h2>Game Development:</h2>
+        <br>
+
         <ul>
-          <li>Unity</li>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original-wordmark.svg" height="100px" width = "100px"/>
+          <div class="card-container">
+            <li>
+              <span>Unity</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" />
+              </div>
+            </li>
+        
+            <li>
+              <span>C#</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+              </div>
+            </li>
+          </div>
         </ul>
 
-        <h2>Computer Modelling and Animation:</h2>
-        <ul>
-          <li>Blender</li>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original-wordmark.svg" height="100px" width = "100px"/>
-          
-        </ul>
-      
+        <br>
         <h2>Database:</h2>
+        <br>
+        
         <ul>
-          <li>SqlLite</li>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" height="100px" width = "100px"/>
+          <div class="card-container">
+            <li>
+              <span>SQLite</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" />
+              </div>
+            </li>
+        
+            <li>
+              <span>MySQL</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+              </div>
+            </li>
+          </div>
+        </ul>
 
-          <li>MySQL</li>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" height="100px" width = "100px"/>
 
+        <br>
+        <h2>Computer Modelling and Animation:</h2>
+        <br>
+
+        <ul>
+          <div class="card-container">
+            <li>
+              <span>Blender</span>
+              <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" />
+              </div>
+            </li>
+          </div>
         </ul>
       </div>
 
