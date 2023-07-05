@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>My Website</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css\header.css">
     <link rel="stylesheet" href="css\style.css">
     <link rel="stylesheet" href="css\profile.css">
     <link rel="stylesheet" href="css\plCards.css">
+    <link rel="stylesheet" href="css\filter.css">
+    
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
@@ -36,12 +38,9 @@
       <div class="nav-buttons container">
         <button>Home</button>
         <button>About</button>
-        <button>Websites</button>
-        <button>Apps</button>
-        <button>Games</button>
-        <button>Models</button>
-        <button>Software</button>
-        <button>Other</button>
+        <button>Skills</button>
+        <button>Projects</button>
+        <button>Contact</button>
       </div>
 
 
@@ -59,14 +58,9 @@
     </div>
   </header>
 
-   
-   <div class = "container">
-    <div id="renderAnimatedObject">
+  
 
-    </div>
-  </div> 
-
-
+  <!-- Profile -->
   <div class = "container">
     <div class="profile-container">
       <div class="profile-picture">
@@ -84,11 +78,194 @@
     </div>
     </div>
 
+    <!-- Skills -->
+    <div class = "container">
+      <h2>Frontend Languages:</h2>
+      <br>
+      <ul>
+        <div class="card-container">
+          <li>
+            <span>HTML</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+            </div>
+          </li>
+      
+          <li>
+            <span>CSS</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+            </div>
+          </li>
+      
+          <li>
+            <span>JavaScript</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+            </div>
+          </li>
+         
+          <li>
+            <span>Three.js</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg" />
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <br>
+      <h2>Backend Languages: </h2>
+      <br>
+      <ul>
+        <div class="card-container">
+          <li>
+            <span>Java</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
+            </div>
+          </li>
+
+          <li>
+            <span>C#</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+            </div>
+          </li>
+
+          <li>
+            <span>PHP</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+            </div>
+          </li>
+        </div>
+    </ul>
+    
+      <br>
+      <h2>App Development:</h2>
+      <br>
+
+      <ul>
+        <div class="card-container">
+          <li>
+            <span>Android</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" />
+            </div>
+          </li>
+
+          <li>
+            <span>Android Studio</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" />
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <br>
+      <h2>Game Development:</h2>
+      <br>
+
+      <ul>
+        <div class="card-container">
+          <li>
+            <span>Unity</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" />
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <br>
+      <h2>Database:</h2>
+      <br>
+      
+      <ul>
+        <div class="card-container">
+          <li>
+            <span>SQLite</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" />
+            </div>
+          </li>
+      
+          <li>
+            <span>MySQL</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+            </div>
+          </li>
+        </div>
+      </ul>
+
+
+      <br>
+      <h2>Computer Modelling and Animation:</h2>
+      <br>
+
+      <ul>
+        <div class="card-container">
+          <li>
+            <span>Blender</span>
+            <div class="card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" />
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+    
+    <!-- -->
     <section id="trending">
 
         <div class="container">
-          <h3 class="text-center section-subheading">- Featured Projects -</h3>
-          <h1 class="text-center section-heading">Games</h1>
+
+          <br>
+          <h3 class="text-center section-subheading">- Projects -</h3>
+          <br>
+
+          <div class="filter-checkboxes">
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkbox-input"></span>
+              <span class="checkbox-icon"><i class="fas fa-globe"></i></span>
+              <span class="checkbox-text">Websites</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkbox-input"></span>
+              <span class="checkbox-icon"><i class="fas fa-mobile"></i></span>
+              <span class="checkbox-text">Apps</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkbox-input"></span>
+              <span class="checkbox-icon"><i class="fas fa-gamepad"></i></span>
+              <span class="checkbox-text">Games</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkbox-input"></span>
+              <span class="checkbox-icon"><i class="fas fa-cubes"></i></span>
+              <span class="checkbox-text">Models</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkbox-input"></span>
+              <span class="checkbox-icon"><i class="fas fa-cogs"></i></span>
+              <span class="checkbox-text">Software</span>
+            </label>
+          </div>
+          
+          
+          
+          
+          
+          
+          
         </div>
 
         <div class="container">
@@ -101,18 +278,13 @@
                 </div>
                 <div class="trending-slide-content">
                   <div class="trending-slide-content-bottom">
-                    <h2 class="food-name">
+                    <h2 class="project-name">
                       The Economy Builder
                     </h2>
                     <div class="additional-content">
                         <p>Additional content goes here</p>
                         <p>Click to find out more</p>
                     </div>
-                    <h3 class="food-rating">
-                      <div class="rating">
-                        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" height="50" width="50"/> -->
-                      </div>
-                    </h3>
                   </div>
                 </div>
               </div>
@@ -124,14 +296,14 @@
                 </div>
                 <div class="trending-slide-content">
                   <div class="trending-slide-content-bottom">
-                    <h2 class="food-name">
+                    <h2 class="project-name">
                       Prison Outbreak
                     </h2>
                     <div class="additional-content">
                       <p>Additional content goes here</p>
                       <p>Click to find out more</p>
                     </div>
-                    <h3 class="food-rating">
+                    <h3 class="project-info">
                       <!-- <span>4.5</span> -->
                       <div class="rating">
                         <!-- <ion-icon name="star"></ion-icon>
@@ -152,14 +324,14 @@
                 </div>
                 <div class="trending-slide-content">
                   <div class="trending-slide-content-bottom">
-                    <h2 class="food-name">
+                    <h2 class="project-name">
                       Events Booking Site
                     </h2>
                     <div class="additional-content">
                         <p>A site used to d book events.</p>
                         <p>Click to find out more</p>
                     </div>
-                    <h3 class="food-rating">
+                    <h3 class="project-info">
                       <div class="rating">
                         <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" height="50" width="50"/> -->
                       </div>
@@ -185,144 +357,23 @@
         </div>
       </section>
 
-      <div class = "container">
-        <h2>Web Development:</h2>
-        <br>
-        <ul>
-          <div class="card-container">
-            <li>
-              <span>HTML</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-              </div>
-            </li>
-        
-            <li>
-              <span>CSS</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
-              </div>
-            </li>
-        
-            <li>
-              <span>JavaScript</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-              </div>
-            </li>
-        
-            <li>
-              <span>PHP</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
-              </div>
-            </li>
-        
-            <li>
-              <span>Three.js</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg" />
-              </div>
-            </li>
-          </div>
-        </ul>
-      
-        <br>
-        <h2>App Development:</h2>
-        <br>
-
-        <ul>
-          <div class="card-container">
-            <li>
-              <span>Android</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" />
-              </div>
-            </li>
-
-            <li>
-              <span>Android Studio</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" />
-              </div>
-            </li>
-
-            <li>
-              <span>Java</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
-              </div>
-            </li>
-          </div>
-        </ul>
-
-        <br>
-        <h2>Game Development:</h2>
-        <br>
-
-        <ul>
-          <div class="card-container">
-            <li>
-              <span>Unity</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" />
-              </div>
-            </li>
-        
-            <li>
-              <span>C#</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-              </div>
-            </li>
-          </div>
-        </ul>
-
-        <br>
-        <h2>Database:</h2>
-        <br>
-        
-        <ul>
-          <div class="card-container">
-            <li>
-              <span>SQLite</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" />
-              </div>
-            </li>
-        
-            <li>
-              <span>MySQL</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-              </div>
-            </li>
-          </div>
-        </ul>
-
-
-        <br>
-        <h2>Computer Modelling and Animation:</h2>
-        <br>
-
-        <ul>
-          <div class="card-container">
-            <li>
-              <span>Blender</span>
-              <div class="card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" />
-              </div>
-            </li>
-          </div>
-        </ul>
-      </div>
-
-
       <div>
         <p>
           <b>Projects</b>
         </p>
       </div>
+
+      <div>
+        <p>
+          <b>Computer Animations</b>
+        </p>
+      </div>
+
+      <div class = "container">
+        <div id="renderAnimatedObject">
+    
+        </div>
+      </div> 
 
       <div>
         University Booking System

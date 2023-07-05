@@ -1,0 +1,63 @@
+.filter-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .filter-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  .filter-checkbox .checkbox-input {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .filter-checkbox .checkbox-input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .filter-checkbox .checkbox-input::before {
+    content: "\2713";
+    font-size: 16px;
+    color: black;
+  }
+  
+  .filter-checkbox.disabled .checkbox-input::before {
+    display: none; /* Hide the tick mark when checkbox is disabled */
+  }
+  
+  .filter-checkbox .checkbox-icon {
+    margin-right: 10px;
+  }
+  
+  .filter-checkbox .checkbox-icon i {
+    font-size: 18px;
+    color: black;
+  }
+  
+  .filter-checkbox .checkbox-text {
+    font-size: 14px;
+  }
+  
+  .filter-checkbox input[type="checkbox"]:checked + .checkbox-input {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+  }
+  
+  
