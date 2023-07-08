@@ -26,6 +26,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0; /* Remove default margin from the body */
+}
+
 ::-webkit-scrollbar {
   width: 1.3rem;
 }
@@ -49,13 +53,14 @@ body {
   background: var(--bg);
 }
 
-header {
+header {  
+  background: linear-gradient(to bottom, #11e3ff, #eafdff00);
   z-index: 100;
   position: fixed;
+  height: 150px; /* Adjust the height as needed */
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px;
 }
 
 .container {
@@ -96,11 +101,11 @@ header {
   position: relative;
 }
 
-@media (max-width:500px) {
+/* @media (max-width:500px) {
   #trending .trending-slider {
     height: 45rem;
   }
-}
+} */
 
 .trending-slide {
   width: 37rem;
@@ -108,7 +113,7 @@ header {
   position: relative;
 }
 
-@media (max-width:500px) {
+@media (max-width:100px) {
   .trending-slide {
     width: 28rem !important;
     height: 36rem !important;
