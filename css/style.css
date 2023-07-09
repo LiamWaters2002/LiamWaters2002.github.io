@@ -101,12 +101,6 @@ header {
   position: relative;
 }
 
-/* @media (max-width:500px) {
-  #trending .trending-slider {
-    height: 45rem;
-  }
-} */
-
 .trending-slide {
   width: 37rem;
   height: 42rem;
