@@ -66,6 +66,8 @@ header {
 .container {
   max-width: 124rem;
   padding: 0 0rem;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 

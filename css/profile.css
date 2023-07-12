@@ -1,17 +1,16 @@
 .profile-container {
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .profile-picture img {
-  width: 100%;
+  max-width: 500px;
   height: auto;
-  max-width: 500px; /* Adjust this value as needed */
 }
 
 .profile-text {
+  flex: 1;
   margin-left: 20px;
 }
 
@@ -21,18 +20,11 @@
   }
 
   .profile-picture img {
-    max-width: 100%;
+    height: auto;
+  }
+
+  .profile-text {
+    margin-top: 20px;
+    margin-left: 0;
   }
 }
-In the updated CSS:
-
-The width property of the .profile-picture img selector is set to 100%. This ensures that the image occupies the full width of its container, regardless of the screen size.
-The max-width property of the .profile-picture img selector is still present, allowing the image to scale down on larger screens while retaining a maximum width of 500 pixels. You can adjust this value to your desired maximum width.
-The height property of the .profile-picture img selector is set to auto, allowing the image to maintain its aspect ratio and adjust its height proportionally based on the width.
-With these modifications, the profile picture should resize correctly when emulating a mobile device.
-
-
-
-
-
-
