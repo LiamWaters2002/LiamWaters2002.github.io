@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  overflow-x: hidden; /* Add this property */
 }
 
 .profile-picture img {
@@ -14,13 +15,14 @@
   margin-left: 20px;
 }
 
+
 @media screen and (max-width: 900px) {
   .profile-container {
     flex-direction: column;
   }
 
   .profile-picture img {
-    height: auto;
+    max-width: 100%;
   }
 
   .profile-text {

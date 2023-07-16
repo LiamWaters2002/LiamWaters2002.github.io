@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css\header.css">
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\slider.css">
     <link rel="stylesheet" href="css\profile.css">
     <link rel="stylesheet" href="css\plCards.css">
     <link rel="stylesheet" href="css\filter.css">
@@ -29,11 +30,11 @@
 
   <header>
     <div class = "header">
-
+<!-- 
       <div class = "container logo">
-        <div id="renderObject"> <!--Use the new animation, its probably down below somewhere...-->
+        <div id="renderObject">
         </div>
-      </div>
+      </div> -->
 
       <div class="nav-buttons container">
         <button>About</button>
@@ -329,17 +330,62 @@
                 </div>
               </div>
               <!-- Slide-end -->
+              <!-- Slide-start -->
+              <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Apps">
+                <div class="trending-slide-img">
+                  <img src="images/app.PNG" alt="Project Image">
+                </div>
+                <div class="trending-slide-content">
+                  <div class="trending-slide-content-bottom">
+                    <h2 class="project-name">
+                      Weather Day Planner App
+                    </h2>
+                    <div class="additional-content">
+                        <p>An app to plan your day based on weather during the day. This is some more lines to fit in...</p>
+                        <p>Click to find out more</p>
+                    </div>
+                    <h3 class="project-info">
+                      <div class="rating">
+                        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" height="50" width="50"/> -->
+                      </div>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide-end -->
+              <!-- Slide-start -->
+              <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Games">
+                <div class="trending-slide-img">
+                  <img src="images/shurikenwars.png" alt="Project Image">
+                </div>
+                <div class="trending-slide-content">
+                  <div class="trending-slide-content-bottom">
+                    <h2 class="project-name">
+                      Shuriken Wars
+                    </h2>
+                    <div class="additional-content">
+                        <p>Team project which involved the creation of a online multiplayer turn based game...</p>
+                        <p>Click to find out more</p>
+                    </div>
+                    <h3 class="project-info">
+                      <div class="rating">
+                        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" height="50" width="50"/> -->
+                      </div>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide-end -->
 
             </div>
   
             <div class="trending-slider-control">
               <div class="swiper-button-prev slider-arrow">
-                <ion-icon name="arrow-back-outline"></ion-icon>
               </div>
               <div class="swiper-button-next slider-arrow">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
               </div>
               <div class="swiper-pagination"></div>
+              <span class="slider-number"></span>
             </div>
   
           </div>

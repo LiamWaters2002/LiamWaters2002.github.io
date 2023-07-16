@@ -1,4 +1,14 @@
-﻿/* CSS styles for the header */
+﻿header {  
+  background: linear-gradient(to bottom, #11e3ff, #eafdff00);
+  z-index: 100;
+  position: fixed;
+  height: 150px; /* Adjust the height as needed */
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* CSS styles for the header */
 .header {
   padding: 20px;
   text-align: center;
