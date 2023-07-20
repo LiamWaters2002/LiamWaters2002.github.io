@@ -26,6 +26,19 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  padding-top: 100px;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
 body {
   margin: 0; /* Remove default margin from the body */
 }
@@ -59,11 +72,4 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-}
-
-/* Logo */
-#renderObject{
-  position: absolute;
-  left: -85px;
-  top: -95px;
 }

@@ -1,122 +1,117 @@
 #trending {
-    padding: 4rem 0;
+  padding: 4rem 0;
+}
+
+@media (max-width: 1440px) {
+  #trending {
+    padding: 7rem 0;
   }
-  
-  @media (max-width: 1440px) {
-    #trending {
-      padding: 7rem 0;
-    }
-  }
-  
-  #trending .trending-slider {
-    height: 70rem;
-    padding: 2rem 0;
-    position: relative;
-    overflow-x: hidden; /* Add this property to hide horizontal overflow */
-  }
-  
+}
+
+#trending .trending-slider {
+  height: 70rem;
+  padding: 2rem 0;
+  position: relative;
+  overflow-x: hidden; /* Add this property to hide horizontal overflow */
+}
+
+.trending-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+
+@media (max-width: 100px) {
   .trending-slide {
-    width: 37rem;
-    height: 42rem;
-    position: relative;
+    width: 28rem !important;
+    height: 36rem !important;
   }
-  
-  @media (max-width: 100px) {
-    .trending-slide {
-      width: 28rem !important;
-      height: 36rem !important;
-    }
-  
-    .trending-slide .trending-slide-img img {
-      width: 28rem !important;
-      height: 36rem !important;
-    }
-  }
-  
-  /* Resize slide image */
+
   .trending-slide .trending-slide-img img {
-    width: 30rem;
-    height: 50rem;
-    border-radius: 2rem;
-    object-fit: cover;
+    width: 28rem !important;
+    height: 36rem !important;
   }
-  
-  .trending-slide .trending-slide-content {
+}
+
+/* Resize slide image */
+.trending-slide .trending-slide-img img {
+  width: 30rem;
+  height: 50rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.trending-slide .trending-slide-content {
+  position: absolute;
+  width: 32rem;
+  left: 1rem;
+  top: 35rem; /* Adjust the top value as needed */
+  right: 0;
+  bottom: 0;
+}
+
+.trending-slide-content .trending-slide-content-bottom {
+  bottom: -5rem;
+  left: 2%;
+  color: var(--black);
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.swiper-slide img {
+  border: 0px solid rgb(255, 255, 255);
+  border-bottom-width: 150px;
+  box-shadow: 2px 2px 2px #111;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.trending-slider-control {
+  display: flex;
+  align-items: flex-start; /* Changed from 'center' to 'flex-start' */
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30rem;
+}
+
+.slider-number {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  margin-bottom: -20rem;
+}
+
+.slider-arrow {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: -15rem;
+}
+
+.swiper-button-prev {
+  margin-right: 1rem;
+}
+
+.swiper-button-next {
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+
+  .trending-slide-content {
     position: absolute;
-    width: 32rem;
+    width: 70%;
     left: 1rem;
-    top: 35rem; /* Adjust the top value as needed */
+    top: 28rem; /* Adjust the top value as needed */
     right: 0;
     bottom: 0;
   }
-  
-  .trending-slide-content .trending-slide-content-bottom {
-    bottom: -5rem;
-    left: 2%;
-    color: var(--black);
-  }
-  
-  .swiper-slide-shadow-left,
-  .swiper-slide-shadow-right {
-    display: none;
-  }
-  
-  .swiper-slide img {
-    border: 0px solid rgb(255, 255, 255);
-    border-bottom-width: 150px;
-    box-shadow: 2px 2px 2px #111;
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
-  }
-  
-  .trending-slider-control {
-    display: flex;
-    align-items: flex-start; /* Changed from 'center' to 'flex-start' */
-    justify-content: center;
-    position: relative;
-    margin-bottom: 30rem;
-  }
-  
-  .slider-number {
-    color: rgb(0, 0, 0);
-    font-size: 1.5rem;
-    margin: 0 1rem;
-    margin-bottom: -20rem;
-  }
-  
-  .slider-arrow {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: black;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 3rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-top: -15rem;
-  }
-  
-  .swiper-button-prev {
-    margin-right: 1rem;
-  }
-  
-  .swiper-button-next {
-    margin-left: 1rem;
-  }
-  
-  @media (max-width: 768px) {
-    .trending-slider {
-      padding: 2rem 0;
-      overflow-x: hidden; /* Add this property to hide horizontal overflow */
-      white-space: nowrap; /* Add this property to prevent wrapping of slides */
-    }
-  
-    .trending-slide {
-      margin-right: 2rem; /* Increase the margin between cards */
-    }
-  
-    .trending-slide:last-child {
-      margin-right: 0; /* Remove margin from the last card */
-    }
-  }
-  
+}

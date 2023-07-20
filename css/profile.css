@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  overflow-x: hidden; /* Add this property */
 }
 
 .profile-picture img {
@@ -15,10 +14,71 @@
   margin-left: 20px;
 }
 
+.profile-buttons {
+  margin-top: 20px;
+}
+
+.profile-buttons a {
+  display: inline-block;
+  margin: 5px;
+}
+
+.profile-buttons button {
+  background-color: #007bff00;
+  color: #000000;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
+  display: flex;
+  align-items: center;
+  
+  padding: 5px 20px;
+  border-radius: 99999px; /* Rounded border */
+}
+
+.profile-buttons button:hover {
+  background-color: #ffffff;
+}
+
+.profile-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap as per your preference */
+}
+
+.profile-buttons img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+#renderObject{
+  height: 260px;
+}
+
+.artstation-button{
+  background-color: #007bff00;
+  color: #000000;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
+  display: flex;
+  align-items: center;
+  height: 150px;
+  padding: 5px 20px;
+  border-radius: 99999px; /* Rounded border */
+}
+
+
 
 @media screen and (max-width: 900px) {
   .profile-container {
     flex-direction: column;
+    align-items: stretch; /* To fill the container's width */
   }
 
   .profile-picture img {

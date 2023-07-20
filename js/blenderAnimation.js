@@ -22,6 +22,11 @@ loader.load("./animations/LiamWatersAnimation.gltf", function (gltf) {
 
   const camera = gltf.cameras[0];
 
+  const poleToRemove = scene.getObjectByName('Pole');
+  const flagToRemove = scene.getObjectByName('Flag');
+  gltf.scene.remove(poleToRemove);
+  gltf.scene.remove(flagToRemove);
+
   const light = new THREE.AmbientLight( 0x808080 ); // soft white light
   scene.add( light );
 

@@ -3,12 +3,12 @@ var slider = new Swiper('.trending-slider', {
   grabCursor: true,
   centeredSlides: true,
   loop: false,
-  slidesPerView: 3,
+  slidesPerView: getSlidesPerView(), // Set initial slidesPerView value
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
     depth: 0,
-    modifier: 2.5,
+    modifier: 1,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -32,6 +32,23 @@ cards.forEach(card => {
     }
   });
 });
+
+// Helper function to determine the appropriate slidesPerView value based on the window width
+function getSlidesPerView() {
+  if (window.innerWidth < 500) {
+    return 1; // Set to 1 slide when viewport width is below 500 pixels
+  }
+  return 3; // Default value of 3 slides
+}
+
+// Function to update the slidesPerView value based on the window width
+function updateSlidesPerView() {
+  slider.params.slidesPerView = getSlidesPerView();
+  slider.update();
+}
+
+// Update slidesPerView on window resize
+window.addEventListener('resize', updateSlidesPerView);
 
 function updateCardVisibility() {
   const enabledFilters = Array.from(checkboxes)

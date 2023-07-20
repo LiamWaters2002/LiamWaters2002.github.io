@@ -5,7 +5,7 @@ import { LoopPingPong } from '../three/build/three.module.js';
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setClearColor(0x000000, 0);
-renderer.setSize(500, 500);
+renderer.setSize(50, 50);
 document.getElementById('renderAnimatedObject').appendChild(renderer.domElement);
 
 const loader = new GLTFLoader();

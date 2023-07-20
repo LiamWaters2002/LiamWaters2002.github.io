@@ -30,11 +30,11 @@
 
   <header>
     <div class = "header">
-<!-- 
-      <div class = "container logo">
-        <div id="renderObject">
-        </div>
-      </div> -->
+
+      <div class="logo">
+        <img src="images/full_icon.png" />
+        <div class="menu-icon">&#9776;</div>
+      </div>
 
       <div class="nav-buttons container">
         <button>About</button>
@@ -43,38 +43,75 @@
       </div>
 
 
-      <div class="menu-icon">&#9776;</div>
+      
+
       <ul class = "dropdown-menu">
+
         <div class="menu-close-btn">&times;</div>
+
         <li><a href="about">About</a></li>
         <li><a href="skills">Skills</a></li>
         <li><a href="projects">Projects</a></li>
+
       </ul>
+
     </div>
   </header>
 
-  
+  <main>
+    <!-- Profile -->
+    <div class="container fade-in">
+      <div class="profile-container">
+        <div class="profile-picture">
+          <img src="images/profile.png" alt="Profile Picture"> 
+        </div>
+        <div class="profile-text">
+          <h1>Hi. I'm Liam Waters.</h1>
+          <p>I am a Computer Science graduate who is working towards being a full stack developer.</p>
+          <p>To develop my skills, I work on projects, self-teach myself new technologies and tools from websites, software, games, apps, and more.</p>
+          <p>I also developed my 3D modelling and animation skills by self-teaching Blender and Three.js.</p>
+          <p>In my free time, I keep up to date by reading up on the latest technology and current affairs. I also exercise and enjoy gaming.</p>
+          <p>
+          </div>
+        </div>
+        <div class="profile-buttons">
 
-  <!-- Profile -->
-  <div class = "container">
-    <div class="profile-container">
-      <div class="profile-picture">
-        <img src="images/profile.png" alt="Profile Picture"> 
-      </div>
-      <div class="profile-text">
-        <h1>Hi. I'm Liam Waters.</h1>
-        <p>I am a Computer Science graduate who is working towards being a full stack developer.</p>
-        <p>To develop my skills I work on projects, self-teach myself new technologies and tools</p>
-        <p></p>
-          from websites, software, games, apps and more.</p>
-        <p>I also developed my 3D modelling and animation skills by self teaching blender and three.js</p>
-        <p>In my free time, I keep up to date by reading up on the latest technology, current affairs. I also exercise during my freetime and also do a bit of gaming.</p>
+          <div class="container">
+            <a href="https://your-artstation-profile-link" target="_blank" rel="noopener noreferrer">
+              <button class="artstation-button">
+                <div id="renderObject"><br></div>
+                Modelling and animation<br>
+                showcase
+              </button>
+            </a>  
+          </div>
+        </div>
+
+        <div class="profile-buttons">
+          <div class="container">
+
+          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+            <button class="linkedin-button">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+              LinkedIn<br>
+            </button>
+          </a>
+  
+          <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer">
+            <button class="github-button">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+              GitHub
+            </button>
+          </a>
+          </div>
+        </div>
+        
       </div>
     </div>
-    </div>
+    
 
     <!-- Skills -->
-    <div class="container">
+    <div class="container fade-in">
       <h2>Frontend Languages:</h2>
       <br>
       <ul>
@@ -207,11 +244,11 @@
         </div>
       </ul>
     </div>
-    
+      
     <!-- -->
-    <section id="trending">
+    <section id="trending" class="fade-in">
 
-        <div class="container">
+        <div class="container ">
 
           <br>
           <h3 class="text-center section-subheading">- Projects -</h3>
@@ -248,14 +285,7 @@
               <span class="checkbox-icon"><i class="fas fa-cogs"></i></span>
               <span class="checkbox-text">Software</span>
             </label>
-          </div>
-          
-          
-          
-          
-          
-          
-          
+          </div> 
         </div>
 
         <div class="container">
@@ -378,7 +408,7 @@
               <!-- Slide-end -->
 
             </div>
-  
+
             <div class="trending-slider-control">
               <div class="swiper-button-prev slider-arrow">
               </div>
@@ -387,115 +417,18 @@
               <div class="swiper-pagination"></div>
               <span class="slider-number"></span>
             </div>
-  
+
           </div>
         </div>
       </section>
+  </main>
+  
 
-      <!--DONT REMOVE THER COMMENTS BELOW YET, KEEP THREE.JS STUFF-->
 
 
-      <!-- <div>
-        <p>
-          <b>Projects</b>
-        </p>
-      </div>
 
-      <div>
-        <p>
-          <b>Computer Animations</b>
-        </p>
-      </div>
-
-      <div class = "container">
-        <div id="renderAnimatedObject">
-    
-        </div>
-      </div> 
-
-      <div>
-        University Booking System
-        Website uses HTML, CSS, Javascript, PHP, MySQL
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" height="100px" width = "100px"/>
-          
-
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" height="100px" width = "100px"/>
-          
-
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="100px" width = "100px"/>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="100px" width = "100px"/>
-
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" height="100px" width = "100px"/>
-          
-      </div>
-
-      <div>
-        Revision tool
-        Uses pattern recognition to generate flash cards using a word document.
-
-        <p>
-          Website
-        </p>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" height="100px" width = "100px"/>
-
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" height="100px" width = "100px"/>
-          
-
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="100px" width = "100px"/>
-        
-        <p>
-          Desktop Application
-        </p>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" height="100px" width = "100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" height="100px" width = "100px"/>
-
-      </div>
-
-      <div>
-        Travelling Day Planner Android App
-        Using Google Maps, Weather API...
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" height="100px" width = "100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" height="100px" width = "100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" height="100px" width = "100px"/>
-
-      </div>
-
-      <div>
-        Portfolio Website
-        Uses to showcase my portfolio and to learn three.js to learn more about WebGL, rendering and animation using the web browser.
-        Uses HTML, CSS, JavaScript, three.js
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" height="100px" width = "100px"/>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" height="100px" width = "100px"/>
-        
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="100px" width = "100px"/>
-          
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg" height="100px" width = "100px"/>
-      </div>
-
-      <div>
-        Prison Outbreak
-        A 3D online multiplayer shooter game in a zombie filled prison.
-        Unity
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original-wordmark.svg" height="100px" width = "100px"/>
-      </div>
-
-      <div>
-        The Economy Builder
-        A educational city builder game which simulates an economy and teaches economics though user-interaction within a 3D world.
-        Unity
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original-wordmark.svg" height="100px" width = "100px"/>
-      </div>
-
-      <div>
-        Shuriken Wars
-        A team project which involved the development of a 2D Online Multiplayer Turn-based game. Makes use of a leaderboard.
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original-wordmark.svg" height="100px" width = "100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" height="100px" width = "100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" height="100px" width = "100px"/>
-      </div>
-
+      
+      <!--
       <div>
         <p>
           <b>Tutorials</b>
@@ -528,5 +461,6 @@
     <script type="module" src="js\animatedLogo.js"></script>
     <script type="module" src="js\stillLogo.js"></script>
     <script type="module" src="js\dropdown.js"></script>
+    <script type="module" src="js\fadeMain.js"></script>
 </body>
 </html>
