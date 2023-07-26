@@ -23,6 +23,7 @@ var slider = new Swiper('.trending-slider', {
 var cards = document.querySelectorAll('.swiper-slide');
 const checkboxes = document.querySelectorAll('.filter-checkbox input[type="checkbox"]');
 var sliderNumber = document.querySelector('.slider-number');
+var totalSlides = 0; // Declare totalSlides at a higher scope
 
 cards.forEach(card => {
   card.addEventListener('click', () => {
@@ -62,7 +63,8 @@ function updateCardVisibility() {
   });
 
   // Update the totalSlides based on the visible slides
-  var totalSlides = visibleSlides.length;
+  totalSlides = visibleSlides.length;
+  console.log("totalSlides = " + totalSlides);
 
   // Update the slider number element
   if (sliderNumber) {
@@ -88,8 +90,11 @@ checkboxes.forEach((checkbox) => {
 slider.on('slideChange', function () {
   var currentIndex = slider.realIndex + 1;
   if (sliderNumber) {
-    sliderNumber.textContent = currentIndex + ' / ' + slider.slides.length;
+    sliderNumber.textContent = currentIndex + ' / ' + totalSlides;
   }
 });
 
 slider.emit('slideChange');
+
+// Initial update to set the correct number of slides
+updateCardVisibility();
