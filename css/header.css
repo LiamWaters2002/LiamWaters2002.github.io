@@ -86,6 +86,10 @@
     display: block;
   }
 
+  .dropdown-menu.hide {
+    display: none;
+  }
+
   .dropdown-menu .menu-close-btn {
     padding: 10px;
     text-align: right;
@@ -103,4 +107,14 @@
     border-bottom: 1px solid white;
     box-sizing: border-box;
   }
+
+  .dropdown-menu:target {
+    display: block;
+  }
+
+  /* When #dropdownMenu is the target, show the .menu-close-btn and hide the .menu-icon */
+  #dropdownMenu:target .menu-close-btn {
+    display: none;
+  }
+  
 }

@@ -96,13 +96,7 @@
   margin-top: -15rem;
 }
 
-.swiper-button-prev {
-  margin-right: 1rem;
-}
 
-.swiper-button-next {
-  margin-left: 1rem;
-}
 
 @media (max-width: 768px) {
 
@@ -115,3 +109,4 @@
     bottom: 0;
   }
 }
+

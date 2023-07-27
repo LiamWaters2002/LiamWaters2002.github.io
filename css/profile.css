@@ -81,10 +81,6 @@
     align-items: stretch; /* To fill the container's width */
   }
 
-  .profile-picture img {
-    max-width: 100%;
-  }
-
   .profile-text {
     margin-top: 20px;
     margin-left: 0;
@@ -93,6 +89,6 @@
 
 @media screen and (max-width: 500px) {
   .profile-picture img {
-    max-width: 100%;
+    width: 100%;
   }
 }
