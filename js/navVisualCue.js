@@ -5,25 +5,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectsSection = document.getElementById("projects");
   
     const navButtons = document.querySelectorAll(".nav-buttons button");
+    let previousActiveSection = null;
   
-    // Function to check if an element is in the viewport
-    function isInViewport(element) {
+    // Function to check if at least 50% of an element is in the viewport
+    function isSectionInViewport(element) {
       const rect = element.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+      const sectionHeight = rect.height;
+      return rect.top >= -sectionHeight / 2 && rect.bottom <= window.innerHeight + sectionHeight / 2;
     }
   
     // Function to update the active navigation button
     function updateActiveNavButton() {
       const sections = [aboutMeSection, skillsSection, projectsSection];
-      const activeSectionIndex = sections.findIndex(isInViewport);
+      const activeSectionIndex = sections.findIndex(isSectionInViewport);
   
-      navButtons.forEach((button, i) => {
-        if (i === activeSectionIndex) {
-          button.classList.add("active");
-        } else {
-          button.classList.remove("active");
-        }
-      });
+      // If no section is currently in view, keep the previous active section
+      const newActiveSection = activeSectionIndex !== -1 ? sections[activeSectionIndex] : previousActiveSection;
+  
+      if (newActiveSection !== previousActiveSection) {
+        navButtons.forEach((button, i) => {
+          if (sections[i] === newActiveSection) {
+            button.classList.add("active");
+          } else {
+            button.classList.remove("active");
+          }
+        });
+  
+        previousActiveSection = newActiveSection;
+      }
     }
   
     // Initial check on page load
