@@ -1,4 +1,4 @@
-﻿header {  
+﻿header {
   background: linear-gradient(to bottom, #11e3ff, #eafdff);
   z-index: 100;
   position: fixed;
@@ -7,7 +7,6 @@
   left: 0;
   width: 100%;
 }
-
 
 /* CSS styles for the header */
 .header {
@@ -32,11 +31,24 @@
 .nav-buttons button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #4CAF50;
-  color: white;
+  margin-right: 8px; /* Add space between icon and text */
+  background-color: #78f2ff; /* Remove the background color */
+  color: z#000000; /* Set the color for the button text */
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Add box shadow */
+  border-radius: 99999px; /* Rounded border */
+}
+
+.nav-buttons button i {
+  margin-right: 8px; /* Add space between icon and text */
+}
+
+.nav-buttons button.active {
+  background-color: #4CAF50; /* Set the background color for the active button */
+  color: #fff; /* Set the color for the text on the active button */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Add box shadow for the active button */
 }
 
 .menu-icon {
@@ -69,6 +81,8 @@
     cursor: pointer;
     float: right;
     font-size: 30px;
+    padding-top: 10px;
+    user-select: none;
   }
 
   .dropdown-menu {
@@ -80,6 +94,7 @@
     width: 250px; /* Set the desired width for the menu */
     background-color: #f9f9f9;
     z-index: 1;
+    user-select: none;
   }
 
   .dropdown-menu.show {
@@ -94,7 +109,7 @@
     padding: 10px;
     text-align: right;
     cursor: pointer;
-    font-size: 30px; /* Increase the font size to make the X icon larger */
+    font-size: 50px; /* Increase the font size to make the X icon larger */
     line-height: 1; /* Ensure the line height does not affect the size */
   }
 
@@ -116,5 +131,7 @@
   #dropdownMenu:target .menu-close-btn {
     display: none;
   }
+
   
 }
+

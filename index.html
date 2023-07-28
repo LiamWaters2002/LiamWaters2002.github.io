@@ -29,29 +29,25 @@
 <body>
 
   <header>
-    <div class = "header">
-
+    <div class="header">
       <div class="logo">
         <img src="images/full_icon.png" />
         <div class="menu-icon">&#9776;</div>
       </div>
-
+  
       <div class="nav-buttons container">
-        <button>About Me</button>
-        <button>Skills</button>
-        <button>Projects</button>
+        <button><i class="fas fa-user"></i>About Me</button> <!-- About Me icon -->
+        <button><i class="fas fa-cogs"></i>Skills</button> <!-- Skills icon -->
+        <button><i class="fas fa-tasks"></i>Projects</button> <!-- Projects icon -->
       </div>
-
-
-      
 
       <ul class = "dropdown-menu">
 
         <div class="menu-close-btn">&times;</div>
 
-        <li><a href="about">About Me</a></li>
-        <li><a href="skills">Skills</a></li>
-        <li><a href="projects">Projects</a></li>
+        <li><button><i class="fas fa-user"></i>About Me</button></li>
+        <li><button><i class="fas fa-cogs"></i>Skills</button></li>
+        <li><button><i class="fas fa-tasks"></i>Projects</button></li>
 
       </ul>
 
@@ -60,7 +56,7 @@
 
   <main>
     <!-- Profile -->
-    <h1 class="section-heading">About Me</h1>
+    <h1 id="about-me" class="section-heading invisibile-heading">About Me</h1>
     <div class="container fade-in">
       <div class="profile-container">
         <div class="profile-picture">
@@ -80,7 +76,8 @@
     
 
     <!-- Skills -->
-    <h1 class="section-heading">Skills</h1>
+    <br><br>
+    <h1 id="skills" class="section-heading">Skills</h1>
     <div class="container fade-in">
       <h2>Frontend Languages:</h2>
       <br>
@@ -221,7 +218,7 @@
         <div class="container ">
 
           <br>
-          <h1 class="section-heading">Projects</h1>
+          <h1 id="projects" class="section-heading">Projects</h1>
           <br>
 
           <div class="filter-checkboxes">
@@ -469,5 +466,7 @@
     <script type="module" src="js\stillLogo.js"></script>
     <script type="module" src="js\dropdown.js"></script>
     <script type="module" src="js\fadeMain.js"></script>
+    <script type="module" src="js\navigation.js"></script>
+    <script type="module" src="js\navVisualCue.js"></script>
 </body>
 </html>

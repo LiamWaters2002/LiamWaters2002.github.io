@@ -81,3 +81,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.invisibile-heading{
+  color:#00000000;
+  user-select: none;
+}
