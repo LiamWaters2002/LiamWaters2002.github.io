@@ -25,14 +25,16 @@ const checkboxes = document.querySelectorAll('.filter-checkbox input[type="check
 var sliderNumber = document.querySelector('.slider-number');
 var totalSlides = 0; // Declare totalSlides at a higher scope
 
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    var pageUrl = card.getAttribute('data-page');
-    if (pageUrl) {
-      window.location.href = pageUrl;
-    }
-  });
-});
+//This was the old clickable cards code, changed for the modal system...
+
+// cards.forEach(card => {
+//   card.addEventListener('click', () => {
+//     var pageUrl = card.getAttribute('data-page');
+//     if (pageUrl) {
+//       window.location.href = pageUrl;
+//     }
+//   });
+// });
 
 // Helper function to determine the appropriate slidesPerView value based on the window width
 function getSlidesPerView() {
