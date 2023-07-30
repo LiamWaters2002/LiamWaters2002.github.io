@@ -72,6 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Function to close the dropdown menu
+  function closeDropdownMenu() {
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    dropdownMenu.classList.remove("show");
+  }
+
   // Initial check on page load
   updateActiveNavButton();
 
@@ -99,19 +105,34 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu.classList.remove("show");
   });
 
-  // Add event listeners to the dropdown menu items
-  const dropdownButtons = document.querySelectorAll("#dropdownMenu button");
-  dropdownButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const headerText = button.textContent.trim();
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      const headerText = item.textContent.trim();
       const targetHeaders = document.querySelectorAll(`main h1.section-heading`);
       targetHeaders.forEach(header => {
         if (header.textContent.trim() === headerText) {
           scrollToElement(header);
-          const dropdownMenu = document.getElementById("dropdownMenu"); // Get the dropdown menu by its id
-          dropdownMenu.classList.remove("show");
+          const dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.classList.remove("show"); // Close the drop-down menu
+        }
+      });
+    });
+  });
+
+      // Add event listeners to the dropdown menu items
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      const headerText = item.textContent.trim();
+      const targetHeaders = document.querySelectorAll(`main h1.section-heading`);
+      targetHeaders.forEach(header => {
+        if (header.textContent.trim() === headerText) {
+          scrollToElement(header);
+          closeDropdownMenu(); // Close the drop-down menu
         }
       });
     });
   });
 });
+
