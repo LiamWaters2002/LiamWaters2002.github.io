@@ -72,12 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Function to close the dropdown menu
-  function closeDropdownMenu() {
-    const dropdownMenu = document.getElementById("dropdownMenu");
-    dropdownMenu.classList.remove("show");
-  }
-
   // Initial check on page load
   updateActiveNavButton();
 
@@ -86,53 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveNavButton();
   });
 
-
-  // Add event listener to the menu icon
-  const menuIcon = document.querySelector(".menu-icon");
-  menuIcon.addEventListener("click", () => {
-    const dropdownMenu = document.getElementById("dropdownMenu"); // Get the dropdown menu by its id
-    if (dropdownMenu.classList.contains("show")) {
-      dropdownMenu.classList.remove("show");
-    } else {
-      dropdownMenu.classList.add("show");
-    }
-  });
-
   // Add event listener to the menu close button
   const menuCloseBtn = document.querySelector(".menu-close-btn");
   menuCloseBtn.addEventListener("click", () => {
     const dropdownMenu = document.getElementById("dropdownMenu"); // Get the dropdown menu by its id
     dropdownMenu.classList.remove("show");
-  });
-
-  dropdownItems.forEach(item => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent default link behavior
-      const headerText = item.textContent.trim();
-      const targetHeaders = document.querySelectorAll(`main h1.section-heading`);
-      targetHeaders.forEach(header => {
-        if (header.textContent.trim() === headerText) {
-          scrollToElement(header);
-          const dropdownMenu = document.getElementById("dropdownMenu");
-          dropdownMenu.classList.remove("show"); // Close the drop-down menu
-        }
-      });
-    });
-  });
-
-      // Add event listeners to the dropdown menu items
-  dropdownItems.forEach(item => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent default link behavior
-      const headerText = item.textContent.trim();
-      const targetHeaders = document.querySelectorAll(`main h1.section-heading`);
-      targetHeaders.forEach(header => {
-        if (header.textContent.trim() === headerText) {
-          scrollToElement(header);
-          closeDropdownMenu(); // Close the drop-down menu
-        }
-      });
-    });
   });
 });
 
