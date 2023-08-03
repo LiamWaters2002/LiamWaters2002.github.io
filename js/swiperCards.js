@@ -25,17 +25,6 @@ const checkboxes = document.querySelectorAll('.filter-checkbox input[type="check
 var sliderNumber = document.querySelector('.slider-number');
 var totalSlides = 0; // Declare totalSlides at a higher scope
 
-//This was the old clickable cards code, changed for the modal system...
-
-// cards.forEach(card => {
-//   card.addEventListener('click', () => {
-//     var pageUrl = card.getAttribute('data-page');
-//     if (pageUrl) {
-//       window.location.href = pageUrl;
-//     }
-//   });
-// });
-
 // Helper function to determine the appropriate slidesPerView value based on the window width
 function getSlidesPerView() {
   if (window.innerWidth < 500) {
@@ -100,3 +89,31 @@ slider.emit('slideChange');
 
 // Initial update to set the correct number of slides
 updateCardVisibility();
+
+// Function to handle the "Enable All" button click event
+function enableAllFilters() {
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = true;
+  });
+  updateCardVisibility();
+}
+
+// Function to handle the "Disable All" button click event
+function disableAllFilters() {
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+  updateCardVisibility();
+}
+
+// Add event listeners for the "Enable All" and "Disable All" buttons
+const enableAllButton = document.querySelector('.enable-all-button');
+const disableAllButton = document.querySelector('.disable-all-button');
+
+if (enableAllButton) {
+  enableAllButton.addEventListener('click', enableAllFilters);
+}
+
+if (disableAllButton) {
+  disableAllButton.addEventListener('click', disableAllFilters);
+}

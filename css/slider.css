@@ -96,8 +96,6 @@
   margin-top: -15rem;
 }
 
-
-
 @media (max-width: 768px) {
 
   .trending-slide-content {
@@ -109,4 +107,26 @@
     bottom: 0;
   }
 }
+
+.card-type {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 0.5rem 0 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-type-text {
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card-type-text i {
+  margin-right: 8px;
+}
+
 

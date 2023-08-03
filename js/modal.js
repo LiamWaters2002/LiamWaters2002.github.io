@@ -32,7 +32,31 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('click', event => {
       if (event.target === modal) {
         closeModal();
+        quickAccess.innerHTML = 'Quick Access:'; //Reset the quick-access section...
       }
     });
   });
+
+const iframe = modal.querySelector('#modal-iframe');
+
+// Add an event listener for when the iframe content is loaded
+iframe.addEventListener('load', () => {
+  // Access the iframe's contentDocument
+  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+  // Get the project-link elements from the iframe's content
+  const projectLinks = iframeDoc.querySelectorAll('.project-link');
+
+  // Get the quick-access element within the modal
+  const quickAccess = modal.querySelector('.quick-access');
+
+  // Clear any existing content in quick-access
+  quickAccess.innerHTML = 'Quick Access:';
+
+  // Iterate through project-links and add them to quick-access
+  projectLinks.forEach(link => {
+    const clonedLink = link.cloneNode(true);
+    quickAccess.appendChild(clonedLink);
+  });
+});
   

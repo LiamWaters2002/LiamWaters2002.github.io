@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css\plCards.css">
     <link rel="stylesheet" href="css\filter.css">
     <link rel="stylesheet" href="css\modal.css">
+    <link rel="stylesheet" href="css\project-detail.css">
     
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -69,7 +70,7 @@
         <div class="profile-text">
           <h1>Hi. I'm Liam Waters.</h1>
           <p>I am a Computer Science graduate who is working towards being a full stack developer.</p>
-          <p>To develop my skills, I work on projects, self-teach myself new technologies and tools from websites, software, games, apps, and more.</p>
+          <p>To develop my skills, I work on projects, self-teach myself new technologies and tools from websites, Desktop Software, games, Mobile Apps, and more.</p>
           <p>I also developed my 3D modelling and animation skills by self-teaching Blender and Three.js.</p>
           <p>In my free time, I keep up to date by reading up on the latest technology and current affairs. I also exercise and enjoy gaming.</p>
           <p>
@@ -236,7 +237,7 @@
               <input type="checkbox" checked>
               <span class="checkbox-input"></span>
               <span class="checkbox-icon"><i class="fas fa-mobile"></i></span>
-              <span class="checkbox-text">Apps</span>
+              <span class="checkbox-text">Mobile Apps</span>
             </label>
             <label class="filter-checkbox">
               <input type="checkbox" checked>
@@ -248,9 +249,14 @@
               <input type="checkbox" checked>
               <span class="checkbox-input"></span>
               <span class="checkbox-icon"><i class="fas fa-cogs"></i></span>
-              <span class="checkbox-text">Software</span>
-            </label>
-          </div> 
+              <span class="checkbox-text">Desktop Software</span>
+            </label>          
+            <div class="filter-buttons">
+              <button class="enable-all-button"><i class="fas fa-check"></i>Enable All</button>
+              <button class="disable-all-button"><i class="fas fa-times"></i>Disable All</button>
+            </div>
+          </div>
+
         </div>
 
         <div class="container">
@@ -258,6 +264,9 @@
             <div class="swiper-wrapper">
               <!-- Slide-start -->
               <div class="swiper-slide trending-slide" data-page="theEconomyBuilder.html" data-cardtype="Games">
+                <div class="card-type">
+                  <p class="card-type-text"><i class="fas fa-gamepad"></i>Game</p>
+                </div>
                 <div class="trending-slide-img">
                   <img src="images/economyBuilder.PNG" alt="Project Image">
                 </div>
@@ -276,6 +285,9 @@
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide trending-slide" data-page="prisonOutbreak.html" data-cardtype="Games">
+                <div class="card-type">
+                  <p class="card-type-text"><i class="fas fa-gamepad"></i>Game</p>
+                </div>
                 <div class="trending-slide-img">
                   <img src="images/prisonOutbreak.PNG" alt="Project Image">
                 </div>
@@ -304,6 +316,9 @@
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Websites">
+                <div class="card-type">
+                  <p class="card-type-text"><i class="fas fa-globe"></i>Website</p>
+                </div>
                 <div class="trending-slide-img">
                   <img src="images/eventsDisplay.PNG" alt="Project Image">
                 </div>
@@ -326,7 +341,10 @@
               </div>
               <!-- Slide-end -->
               <!-- Slide-start -->
-              <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Apps">
+              <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Mobile Apps">
+                <div class="card-type">
+                  <p class="card-type-text"><i class="fas fa-mobile"></i>Mobile App</p>
+                </div>
                 <div class="trending-slide-img">
                   <img src="images/app.PNG" alt="Project Image">
                 </div>
@@ -350,6 +368,9 @@
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Games">
+                <div class="card-type">
+                  <p class="card-type-text"><i class="fas fa-gamepad"></i>Game</p>
+                </div>
                 <div class="trending-slide-img">
                   <img src="images/shurikenwars.png" alt="Project Image">
                 </div>
@@ -372,7 +393,10 @@
               </div>
               <!-- Slide-end -->
                             <!-- Slide-start -->
-                            <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Software">
+                            <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Desktop Software">
+                              <div class="card-type">
+                                <p class="card-type-text"><i class="fas fa-cogs"></i>Desktop Software</p>
+                              </div>
                               <div class="trending-slide-img">
                                 <img src="images/shurikenwars.png" alt="Project Image">
                               </div>
@@ -396,6 +420,9 @@
                             <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide trending-slide" data-page="eventBookings.html" data-cardtype="Websites">
+                <div class="card-type">
+                  <p class="card-type-text"><i class="fas fa-globe"></i>Website</p>
+                </div>
                 <div class="trending-slide-img">
                   <img src="images/eventsDisplay.PNG" alt="Project Image">
                 </div>
@@ -442,9 +469,19 @@
             <div class="modal" id="modal">
               <div class="modal-content">
                 <span class="close" id="modal-close">&times;</span>
+                <div class="quick-access">
+                  Quick Access:
+                  <!--Fetch project-links from readme here...-->
+                </div>
                 <iframe id="modal-iframe" src=""></iframe>
               </div>
             </div>
+
+            <script>
+              function openLinkInNewTab(url) {
+                window.open(url, '_blank');
+              }
+              </script>
 
       <div class="profile-buttons">
 
@@ -516,6 +553,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     
+
     <script type="module" src="js\animatedLogo.js"></script>
     <script type="module" src="js\stillLogo.js"></script>
     <script type="module" src="js\dropdown.js"></script>
