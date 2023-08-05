@@ -115,7 +115,9 @@
   left: 0;
   padding: 0.5rem 1rem;
   background-color: white;
-  border-radius: 0.5rem 0 0 0;
+  border-radius: 1rem 0 1rem 0;
+  border-bottom: 1px solid black; /* Add a black border to the bottom */
+  border-right: 1px solid black;  /* Add a black border to the right */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

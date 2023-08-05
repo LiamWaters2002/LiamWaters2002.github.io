@@ -100,7 +100,7 @@
     max-width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 50px;
     order: 1; /* Change the order to 1 to place it below the main slide */
   }
   
@@ -129,7 +129,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 50%;
+    top: 110%;
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
@@ -141,7 +141,6 @@
   }
   
   .swiper-button-prev {
-    left: 0px; /* Adjust the value to position the arrow */
     background-image: url('arrow-left.png');
     background-size: cover;
   }
@@ -207,4 +206,10 @@ left: 0;
 .readme {
   text-align: center;
   font-size: 14px;
+}
+
+.project-link i{
+  font-size: 28px;
+  margin-right: 8px;
+  vertical-align: middle;
 }

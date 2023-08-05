@@ -86,3 +86,10 @@
 .disable-all-button {
   background-color: #F44336;
 }
+
+.filter-header{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 8px;
+}
