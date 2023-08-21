@@ -40,10 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function scrollToElement(element) {
     const fixedHeaderHeight = 100; // Replace with the actual height of your fixed header if you have one
     const offset = element.offsetTop - fixedHeaderHeight;
+    console.log(offset);
+
+    //RequestAnimationFrame provides a more reliable scrolling for mobile... 
+  requestAnimationFrame(() => {
     window.scroll({
       top: offset,
       behavior: 'smooth'
     });
+  });
   }
 
   // Add event listeners to the navigation buttons
@@ -87,4 +92,3 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu.classList.remove("show");
   });
 });
-
