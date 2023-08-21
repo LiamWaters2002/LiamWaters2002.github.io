@@ -14,7 +14,7 @@ var swiper = new Swiper('.swiper-container', {
       el: '.swiper-pagination',
       clickable: true,
     },
-    spaceBetween: 999999,
+    spaceBetween: 10000,
     speed: 1 
   });
 

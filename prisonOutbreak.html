@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Project Portfolio</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="stylesheet" href="css\project-detail.css">
 </head>
 <body>
@@ -15,7 +17,7 @@
           <div class="swiper-button-prev">
             <span class="arrow-text prev">Previous</span>
           </div>
-          <img src="images/image1.png" alt="Project Image 1">
+          <img src="images\prisonOutbreak\Lobby.PNG" alt="Project Image 1">
           <div class="swiper-button-next">
             <span class="arrow-text next">Next</span>
           </div>
@@ -24,7 +26,16 @@
           <div class="swiper-button-prev">
             <span class="arrow-text prev">Previous</span>
           </div>
-          <img src="images/image2.png" alt="Project Image 2">
+          <img src="images\prisonOutbreak\Room.PNG" alt="Project Image 2">
+          <div class="swiper-button-next">
+            <span class="arrow-text next">Next</span>
+          </div>
+        </div>
+        <div class="swiper-slide slide2">
+          <div class="swiper-button-prev">
+            <span class="arrow-text prev">Previous</span>
+          </div>
+          <img src="images\prisonOutbreak\Map Selector.PNG" alt="Project Image 3">
           <div class="swiper-button-next">
             <span class="arrow-text next">Next</span>
           </div>
@@ -33,18 +44,16 @@
           <div class="swiper-button-prev">
             <span class="arrow-text prev">Previous</span>
           </div>
-          <img src="images/image3.png" alt="Project Image 3">
+          <img src="images\prisonOutbreak\Multiplayer.png" alt="Project Image 4">
           <div class="swiper-button-next">
             <span class="arrow-text next">Next</span>
           </div>
         </div>
-        <div class="swiper-slide youtube-slide">
+        <div class="swiper-slide slide3">
           <div class="swiper-button-prev">
             <span class="arrow-text prev">Previous</span>
           </div>
-          <div class="project-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/C0DPdy98e4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
+          <img src="images\prisonOutbreak\Score.png" alt="Project Image 5">
           <div class="swiper-button-next">
             <span class="arrow-text next">Next</span>
           </div>
@@ -55,31 +64,56 @@
     <div class="swiper-thumbs">
       <div class="swiper-wrapper">
         <div class="swiper-slide swiper-slide-thumb-active">
-          <img src="images/image1.png" alt="Project Image 1">
+          <img src="images\prisonOutbreak\Lobby.PNG" alt="Project Image 1">
         </div>
         <div class="swiper-slide">
-          <img src="images/image2.png" alt="Project Image 2">
+          <img src="images\prisonOutbreak\Room.PNG" alt="Project Image 2">
         </div>
         <div class="swiper-slide">
-          <img src="images/image3.png" alt="Project Image 3">
+          <img src="images\prisonOutbreak\Map Selector.PNG" alt="Project Image 3">
         </div>
         <div class="swiper-slide">
-          <img src="http://img.youtube.com/vi/C0DPdy98e4c/0.jpg" alt="Project Video">
+          <img src="images\prisonOutbreak\Multiplayer.png" alt="Project Image 4">
+        </div>
+        <div class="swiper-slide">
+          <img src="images\prisonOutbreak\Score.png" alt="Project Image 5">
         </div>
       </div>
     </div>
     <div class="project-details">
       <p class="project-description">
-        A 3D online multiplayer zombie survival game. <br>
-        <b><ul>Features</ul></b><br>
-       Photon Pun 2<br>
-       Synced healthbar, names, movement, attacks<br>
-       Animated player, walking, running.<br>
-       Animated NPC - walking, attacking<br>
-       Dynamic point lighting for torch<br>
-       Backendless database to store user's last score.<br>
-      </p>
-      <a class="project-link" href="#">Visit Project</a>
+        <h2>Project Overview</h2>
+
+        <p>A 3D online multiplayer zombie shooter game where you kill zombies to gather points to try and beat your score. Play with your friends and survive together as a team. Makes use of a backendless database for keeping the score.</p>
+
+        <h2>Technologies Used</h2>
+        Unity <br>
+        Backendless database<br>
+        Photon PUN 2 <br>
+
+        <h2>Key Features</h2>
+        Photon PUN 2 multiplayer <br>
+        Navmesh and waypoints (pathfinding)<br>
+        Animations for NPC & players <br>
+        Map Selection <br>
+
+        <h2>How to setup this project locally?</h2>
+        Details coming soon...
+
+        <h2>What's next?</h2>
+        This project was coursework for the game development module. Further development would include working on additional content and polishing the game.
+        <br>
+
+        1. Additional GUI <br>
+        Make all player's healthbars (along with their name) in the GUI so users will always be able to see it. This will allow players to help one another when health is low. Currently, it is above the head, which works fine when the players are close together. <br>
+
+        <br>
+        2. Player Damange (in another gamemode)
+        From the feedback given from the module, having player damage would be a possible feature to include in the future. This was not planned initially, NPC zombies can only damage players atm. Player damage would be included in another gamemode.
+        <br>
+        <br>
+        <br>
+      <a class="project-link" onclick="openLinkInNewTab('https://github.com/LiamWaters2002/FinalYearProject')"><i class="devicon-github-original"></i>View GitHub Repository</a>
     </div>
   </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

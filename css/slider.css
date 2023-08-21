@@ -35,7 +35,7 @@
 
 /* Resize slide image */
 .trending-slide .trending-slide-img img {
-  width: 30rem;
+  width: 27rem;
   height: 50rem;
   border-radius: 2rem;
   object-fit: cover;
@@ -43,7 +43,7 @@
 
 .trending-slide .trending-slide-content {
   position: absolute;
-  width: 29rem;  /* Adjust to stop text going over edge... */
+  width: 26rem;  /* Adjust to stop text going over edge... */
   left: 1rem;
   top: 35rem;
   right: 0;
