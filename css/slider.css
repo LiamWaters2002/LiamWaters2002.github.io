@@ -16,7 +16,7 @@
 }
 
 .trending-slide {
-  width: 37rem;
+  width: 28rem;
   height: 42rem;
   position: relative;
 }
@@ -131,4 +131,9 @@
   margin-right: 8px;
 }
 
+@media (min-width: 501px) {
+  .swiper-slide {
+    margin-right: -10px;
+  }
+}
 
