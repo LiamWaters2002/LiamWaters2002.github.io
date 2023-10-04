@@ -73,7 +73,7 @@
   align-items: flex-start; /* Changed from 'center' to 'flex-start' */
   justify-content: center;
   position: relative;
-  margin-bottom: 30rem;
+  top: -110px; 
 }
 
 .slider-number {
