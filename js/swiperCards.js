@@ -3,7 +3,7 @@ var slider = new Swiper('.trending-slider', {
   grabCursor: true,
   centeredSlides: true,
   loop: false,
-  slidesPerView: getSlidesPerView(),
+  slidesPerView: getSlidesPerView(), // Set initial slidesPerView value
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
@@ -23,13 +23,14 @@ var slider = new Swiper('.trending-slider', {
 var cards = document.querySelectorAll('.swiper-slide');
 const checkboxes = document.querySelectorAll('.filter-checkbox input[type="checkbox"]');
 var sliderNumber = document.querySelector('.slider-number');
+var totalSlides = 0; // Declare totalSlides at a higher scope
 
-var totalSlides = 0;
-var defaultSlideNumber = 3;
-var reducedSlideNumber = 1;
-
+// Helper function to determine the appropriate slidesPerView value based on the window width
 function getSlidesPerView() {
-  return window.innerWidth < 500 ? reducedSlideNumber : defaultSlideNumber;
+  if (window.innerWidth < 500) {
+    return 1; // Set to 1 slide when viewport width is below 500 pixels
+  }
+  return 3; // Default value of 3 slides
 }
 
 // Function to update the slidesPerView value based on the window width
@@ -68,6 +69,9 @@ function updateCardVisibility() {
   });
 
   slider.update(); // Refresh the slider
+
+  // Reset the active slide to the first one
+  // slider.slideTo(0);
 }
 
 checkboxes.forEach((checkbox) => {
